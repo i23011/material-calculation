@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+input[type="number"] {
+  width: calc(50% - 10px);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+　margin-right: 5px;   /* 右の距離 */
+  font-size: 16px; /* 文字サイズを16pxに設定 */
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #e9ecef;
+}
+
+td button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td button:hover {
+  background-color: #c82333;
+}
+
+
+
+
+.radio-container {
+    display: flex;
+    justify-content: flex-start; /* 左寄せ */
+    margin-bottom: 20px; /* ラジオボタンと他の要素の間にスペースを追加 */
+}
+
+.radio-container label {
+    margin-right: 15px; /* ラジオボタンの間にスペースを追加 */
+}
+
+.radio-label {
+  cursor: pointer;
+  font-size: 16px; /* フォントサイズを大きく */
+}
+
+.radio-label input {
+  display: none; /* デフォルトのラジオボタンを非表示に */
+}
+
+.radio-custom {
+  display: inline-block;
+  padding: 10px 30px; /* 右側のパディングを広げて丸が文字を隠さないようにする */
+  border-radius: 20px; /* 丸みを持たせる */
+  background-color: #e9ecef; /* デフォルトの背景色 */
+  color: #007bff; /* デフォルトの文字色 */
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.radio-label input:checked + .radio-custom {
+  background-color: #007bff; /* 選択時の背景色 */
+  color: white; /* 選択時の文字色 */
+}
+
+.radio-custom:hover {
+  background-color: #e7f0ff; /* ホバー時の背景色 */
+}
+
+
+.remaining-info {
+  display: flex; /* フレックスボックスを使用 */
+    justify-content: flex-start; /* 左寄せ */
+  margin: 10px 0; /* 上下にスペースを追加 */
+}
+
+.remaining-info label {
+  margin-right: 30px; /* ラベルの間にスペースを追加 */
+}
+
+
+
+
+
+
+.canvas-container {
+  border: 1px solid #white;
+  position: relative; /* 相対位置にする */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* 中央寄せに設定 */
+}
+
+.clear-button {
+  padding: 10px 15px;
+  background-color: #dc3545; /* 赤色に設定 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: #c82333; /* ホバー時の背景色 */
+}
