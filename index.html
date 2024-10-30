@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>材料取り計算アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>材料取り計算アプリ</h1>
+
+  <div class="container">
+    <div class="input-section">
+      <h2>材料の寸法</h2>
+      <label>縦寸法 (mm): <input type="number" id="materialHeight" value="150"></label>
+      <label>横寸法 (mm): <input type="number" id="materialWidth" value="600"></label>
+      <button onclick="setMaterial()">材料を用意する</button>
+    </div>
+
+    <div class="input-section">
+      <h2>部品の寸法</h2>
+      <label>部品の縦寸法 (mm): <input type="number" id="partHeight" value="150" /></label>
+      <label>部品の横寸法 (mm): <input type="number" id="partWidth" value="195" /></label>
+      <label>右の隙間 (mm): <input type="number" id="gapWidth" value="5" /></label>
+      <label>下の隙間 (mm): <input type="number" id="gapHeight" value="0" /></label>
+
+      <div class="radio-container">
+        <label class="radio-label">
+          <input type="radio" name="direction" value="down">
+          <span class="radio-custom">下に</span>
+        </label>
+
+        <label class="radio-label">
+          <input type="radio" name="direction" value="right" checked>
+          <span class="radio-custom">右に</span>
+          <button onclick="addNextPart()">部品を追加する</button>
+        </label>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="materialCanvas"></canvas>
+      <!-- ボタンを囲む div を追加 -->
+      <div class="button-container">
+        <button class="clear-button" onclick="clearAllParts()">部品を全部取り除く</button>
+      </div>
+    </div>
+
+    <!-- 材料の残り寸法を表示 -->
+<div class="remaining-info">
+  <label>材料の縦の残り: <span id="remainingHeight">150</span> mm</label>
+  <label>材料の横の残り: <span id="remainingWidth">600</span> mm</label>
+</div>
+
+    <!-- 部品リスト -->
+    <div>
+      <h2>部品一覧</h2>
+      <table id="partList">
+        <tr>
+          <th>部品名</th>
+          <th>縦 (mm)</th>
+          <th>縦隙間 (mm)</th>
+          <th>横 (mm)</th>
+          <th>横隙間 (mm)</th>
+          <th>削除</th>
+          <th>寸法変更</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
